@@ -148,3 +148,6 @@ ingest/
 .DS_Store
 
 private_keys.py
+
+Neighborhoods.js
+Places.js
