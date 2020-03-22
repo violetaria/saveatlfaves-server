@@ -111,10 +111,10 @@ class Area(models.Model):
 class Place(models.Model):
     name = models.TextField()
     place_id = models.TextField(primary_key=True)
-    lat = models.FloatField()
-    lng = models.FloatField()
-    user_rating = models.FloatField()
-    num_ratings = models.FloatField()
+    lat = models.FloatField(blank=True)
+    lng = models.FloatField(blank=True)
+    user_rating = models.FloatField(blank=True)
+    num_ratings = models.FloatField(blank=True)
     address = models.TextField()
     area = models.ForeignKey(to='Area', null=True, blank=True, on_delete=models.SET_NULL)
     email_contact = models.EmailField(null=True, blank=True)
@@ -158,7 +158,7 @@ class Place(models.Model):
         return self.image_url or "http://TODO/placeholder"
 
     def get_short_address(self):
-        return self.address.split(', CA')[0]
+        return self.address.split(', GA')[0]
 
     def to_json(self):
         return {
@@ -184,6 +184,21 @@ class Place(models.Model):
         return '%s (%s)' % (self.name, self.address)
 
     def save(self, *args, **kwargs):
+        from places.google_places_helper import fetch_details_for_place_id
+        r, photo_url, photo_attrib = fetch_details_for_place_id(self.place_id)
+        self.name = r['name']
+        self.address = r['formatted_address']
+        if r['rating']:
+            self.user_rating = r['rating']
+        self.num_ratings = r['user_ratings_total']
+        self.place_types = ','.join(r.get('types', []))
+        self.place_url = r.get('website')
+        lat, lng = r['geometry']['location']['lat'], r['geometry']['location']['lng']
+        self.lat = lat
+        self.lng = lng
+        self.image_url = photo_url
+        self.image_attribution = photo_attrib
+
         if (self.lat and self.lng):
             self.geom = Point([float(x) for x in (self.lng, self.lat)], srid=4326)
         super(self.__class__, self).save(*args, **kwargs)
