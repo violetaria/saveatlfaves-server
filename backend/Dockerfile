@@ -34,4 +34,4 @@ RUN set -ex && \
 # copy project
 COPY . /usr/local/site/
 
-CMD gunicorn --bind 0.0.0.0:$PORT -c gunicorn.py carebackend.wsgi
+# CMD gunicorn --bind 0.0.0.0:$PORT -c gunicorn.py carebackend.wsgi
