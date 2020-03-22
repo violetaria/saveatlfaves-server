@@ -5,3 +5,5 @@ gunicorn==19.9.0
 pandas
 requests
 ipython
+dj-database-url
+django-heroku
