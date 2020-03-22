@@ -91,7 +91,7 @@ DATABASES = {
 # only update a few items if we are going to heroku
 TO_UPDATE = ("HOST", "PORT", "USER", "PASSWORD", "NAME")
 HEROKU_DJ_DB_CONFIG = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'].update((k, HEROKU_DJ_DB_CONFIG[v]) for k,v in DATABASES['default'].iteritems() if k in TO_UPDATE)
+DATABASES['default'].update((k, HEROKU_DJ_DB_CONFIG[k]) for k,v in DATABASES['default'].items() if k in TO_UPDATE)
 # DATABASES['default'].update(dj_database_url.config(conn_max_age=600, ssl_require=True))
 
 # Password validation
