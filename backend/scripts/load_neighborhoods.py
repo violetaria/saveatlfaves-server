@@ -8,7 +8,6 @@ django.setup()
 from places.models import Neighborhood, NeighborhoodEntry, Place, Area
 from django.contrib.gis.geos import Polygon
 import pandas as pd
-from shapely.geometry import Polygon as ShapelyPolygon
 
 fl = sys.argv[1]
 area_to_use = sys.argv[2]
@@ -20,16 +19,17 @@ df = pd.read_csv(fl)
 
 for _, row in df.iterrows():
     print("Processing", row['Neighborhood'])
+    db_key = row.get('DB Key', "_".join(row['Neighborhood'].split()).lower())
     try:
-        n = Neighborhood.objects.get(key=row['DB Key'])
+        n = Neighborhood.objects.get(key=db_key)
     except Neighborhood.DoesNotExist:
         if insert_if_not_found:
             n = Neighborhood(name=row['Neighborhood'])
-            n.key = row['DB Key']
+            n.key = db_key
         else:
             print("No DB Key match and not inserting, continuing...")
             continue
-    if row['GeoJSON'] and not pd.isna(row['GeoJSON']):
+    if row.get('GeoJSON') and not pd.isna(row['GeoJSON']):
         if row['GeoJSON'].startswith('[[['):
             row['GeoJSON'] = row['GeoJSON'][1:-1]
         if not row['GeoJSON'].startswith('[['):
@@ -40,8 +40,18 @@ for _, row in df.iterrows():
         centroid = poly.centroid
         lat = centroid.y
         lng = centroid.x
-    elif row.get('Location'):
+    elif row.get('Location') and not pd.isna(row['Location']):
         lat,lng = [x.strip() for x in row['Location'].split(',')]
+    elif row.get('Geometry') and not pd.isna(row['Geometry']):
+        geometry_json = json.loads(row['Geometry'])
+        xmin = geometry_json['geometry']['viewport']['southwest']['lng']
+        ymin = geometry_json['geometry']['viewport']['southwest']['lat']
+        xmax = geometry_json['geometry']['viewport']['northeast']['lng']
+        ymax = geometry_json['geometry']['viewport']['northeast']['lat']
+        bbox = (xmin, ymin, xmax, ymax)
+        n.bounds = Polygon.from_bbox(bbox)
+        lat = geometry_json['geometry']['location']['lat']
+        lng = geometry_json['geometry']['location']['lng']
     else:
         print("missing necessary data!")
         continue

@@ -1,0 +1,202 @@
+Neighborhood,GeoJSON,Location,Geometry,Area
+Castleberry Hill,,,,downtown
+Centennial Hill,,,,downtown
+Fairlie-Poplar,,,,downtown
+Five Points,,,,downtown
+Hotel District,,,,downtown
+Luckie Marietta,,,,downtown
+Peachtree Center,,,,downtown
+SoNo,,,,downtown
+South Downtown,,,,downtown
+Midtown,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.783315,
+        ""lng"": -84.38311659999999
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.8023747,
+          ""lng"": -84.3646146
+        },
+        ""southwest"": {
+          ""lat"": 33.7712281,
+          ""lng"": -84.3944192
+        }
+      }
+  }
+}",midtown
+Ansley Park,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.794558,
+        ""lng"": -84.3790372
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.8089985,
+          ""lng"": -84.3708855
+        },
+        ""southwest"": {
+          ""lat"": 33.7864907,
+          ""lng"": -84.38714499999999
+        }
+      }
+    }
+}",midtown
+Atlantic Station,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7912543,
+        ""lng"": -84.3987406
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7974176,
+          ""lng"": -84.3918228
+        },
+        ""southwest"": {
+          ""lat"": 33.787574,
+          ""lng"": -84.4076736
+        }
+      }
+    }
+}",midtown
+Georgia Tech,,,"{  ""geometry"": {
+      ""location"": {
+        ""lat"": 33.77561779999999,
+        ""lng"": -84.39628499999999
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.786564,
+          ""lng"": -84.37895280000001
+        },
+        ""southwest"": {
+          ""lat"": 33.76633560000001,
+          ""lng"": -84.41260639999999
+        }
+      }
+    }
+}",midtown
+Technology Square,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7759276,
+        ""lng"": -84.3890286
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7795575,
+          ""lng"": -84.38728449999999
+        },
+        ""southwest"": {
+          ""lat"": 33.773859,
+          ""lng"": -84.3905675
+        }
+      }
+    }
+}",
+Home Park,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7861948,
+        ""lng"": -84.4018964
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7900879,
+          ""lng"": -84.39118979999999
+        },
+        ""southwest"": {
+          ""lat"": 33.7796512,
+          ""lng"": -84.41529749999999
+        }
+      }
+    }
+}",midtown
+Loring Heights,,,"{  ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7961596,
+        ""lng"": -84.403318
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.8031147,
+          ""lng"": -84.3950844
+        },
+        ""southwest"": {
+          ""lat"": 33.7886041,
+          ""lng"": -84.4080287
+        }
+      }
+    }
+}",midtown
+Sherwood Forest,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.8000166,
+        ""lng"": -84.38311659999999
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.8065291,
+          ""lng"": -84.37814349999999
+        },
+        ""southwest"": {
+          ""lat"": 33.797186,
+          ""lng"": -84.3868233
+        }
+      }
+    }
+}",midtown
+Berkeley Park,,,,west_midtown
+Blandtown,,,,west_midtown
+Knight Park/Howell Station,,,,west_midtown
+Marietta Street Artery,,,,west_midtown
+Atkins Park,,,,east_side
+Avondale Estates,,,,east_side
+Cabbagetown,,,,east_side
+Candler Park,,,,east_side
+Druid Hills,,,,east_side
+Decatur,,,,east_side
+East Atlanta,,,,east_side
+East Lake,,,,east_side
+Edgewood,,,,east_side
+Inman Park,,,,east_side
+Kirkwood,,,,east_side
+Lake Claire,,,,east_side
+Lindridge‑Martin Manor,,,,east_side
+Morningside‑Lenox Park,,,,east_side
+Oakland,,,,east_side
+Old Fourth Ward,,,,east_side
+Ormewood Park,,,,east_side
+Piedmont Heights,,,,east_side
+Poncey-Highland,,,,east_side
+Reynoldstown,,,,east_side
+Sweet Auburn,,,,east_side
+Scottdale,,,,east_side
+Virginia-Highland,,,,east_side
+Buckhead,,,,buckhead
+Amal Heights,,,,south_side
+Benteen Park,,,,south_side
+Betmar LaVilla,,,,south_side
+Blair Villa/Poole Creek,,,,south_side
+Boulevard Heights,,,,south_side
+Browns Mill Park,,,,south_side
+Chosewood Park,,,,south_side
+Custer/McDonough/Guice,,,,south_side
+Glenrose Heights,,,,south_side
+Grant Park,,,,south_side
+High Point,,,,south_side
+Joyland,,,,south_side
+Lakewood,,,,south_side
+Lakewood Heights,,,,south_side
+Norwood Manor,,,,south_side
+Orchard Knob,,,,south_side
+Peoplestown,,,,south_side
+Polar Rock,,,,south_side
+Rebel Valley Forest,,,,south_side
+Rosedale Heights,,,,south_side
+South Atlanta,,,,south_side
+South River Gardens,,,,south_side
+State Facility,,,,south_side
+Summerhill,,,,south_side
+Swallow Circle/Baywood,,,,south_side
+The Villages at Carver,,,,south_side
+Thomasville Heights,,,,south_side
+Woodland Hills,,,,south_side
