@@ -150,7 +150,10 @@ LOGGING = {
 STATIC_URL = '/django-static/'
 STATIC_ROOT = os.path.join(os.path.dirname(__file__), './django-static/')
 
-try:
-    from .private_keys import GOOGLE_PLACES_API_KEY
-except ImportError as e:
-    print("Please supply a private_keys.py file with a GOOGLE_PLACES_API_KEY")
+GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
+
+if not GOOGLE_PLACES_API_KEY:
+    try:
+        from .private_keys import GOOGLE_PLACES_API_KEY
+    except ImportError as e:
+        print("Please supply a private_keys.py file with a GOOGLE_PLACES_API_KEY")
