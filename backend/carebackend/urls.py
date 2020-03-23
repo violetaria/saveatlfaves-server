@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
+from django.views.generic import TemplateView
 from places.views import (
     neighborhood_detail,
     place_detail,
@@ -29,5 +30,6 @@ urlpatterns = [
     path('api/places/by_neighborhood', neighborhood_detail),
     path('api/places/submit_email', submit_email_for_place),
     path('api/places/submit_gift_card_link', submit_gift_card_link),
-    path('api/places/submit_new_place', submit_new_place)
+    path('api/places/submit_new_place', submit_new_place),
+    re_path(".*", TemplateView.as_view(template_name="build/index.html")),
 ]
