@@ -107,6 +107,7 @@ celerybeat.pid
 
 # Environments
 .env
+.env*
 .venv
 env/
 venv/
@@ -151,4 +152,5 @@ private_keys.py
 backend/Neighborhoods.js
 backend/Places.js
 
-.env*
+
+frontend.backup
