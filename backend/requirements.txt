@@ -6,4 +6,4 @@ pandas
 requests
 ipython
 dj-database-url
-django-heroku
+whitenoise
