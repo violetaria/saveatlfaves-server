@@ -148,5 +148,7 @@ ingest/
 
 private_keys.py
 
-Neighborhoods.js
-Places.js
+backend/Neighborhoods.js
+backend/Places.js
+
+.env*
