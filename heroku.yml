@@ -1,9 +1,9 @@
 build:
   docker:
-    web: ./Dockerfile
+    web: ./backend/Dockerfile
 run:
   web: gunicorn --bind 0.0.0.0:$PORT -c gunicorn.py carebackend.wsgi
 release:
   image: web
   command:
-    - python3 manage.py migrate --settings carebackend.settings.production
+    - ./deployment-tasks.sh

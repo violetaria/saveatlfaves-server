@@ -40,13 +40,7 @@ WORKDIR /usr/local/site/frontend/build
 
 RUN mkdir root && mv *.ico *.js *.json root
 
+WORKDIR /usr/local/site/backend
+
 # Collect static files
-RUN mkdir /usr/local/site/backend/staticfiles
-
-WORKDIR /usr/local/site/
-
-# SECRET_KEY is only included here to avoid raising an error when generating static files.
-# Be sure to add a real SECRET_KEY config variable in Heroku.
-RUN DJANGO_SETTINGS_MODULE=carebackend.settings.production \
-  SECRET_KEY=somethingsupersecret \
-  python3 backend/manage.py collectstatic --noinput
+RUN mkdir -p /usr/local/site/backend/staticfiles
