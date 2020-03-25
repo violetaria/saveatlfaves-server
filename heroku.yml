@@ -6,4 +6,4 @@ run:
 release:
   image: web
   command:
-    - python3 manage.py migrate --settings carebackend.settings.base
+    - python3 manage.py migrate --settings carebackend.settings.production
