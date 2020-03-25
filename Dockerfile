@@ -32,5 +32,4 @@ RUN set -ex && \
     pip install -r requirements.txt
 
 # copy project
-COPY ./backend /usr/local/site/backend/
-COPY ./frontend /usr/local/site/frontend/
+COPY . /usr/local/site/
