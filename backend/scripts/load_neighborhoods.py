@@ -2,7 +2,7 @@ import json
 import django
 import sys
 import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
+# os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
 sys.path.append(os.path.dirname(__file__) + '/..')
 django.setup()
 from places.models import Neighborhood, NeighborhoodEntry, Place, Area
@@ -24,7 +24,7 @@ for _, row in df.iterrows():
     # overwrite area if it's there
     if row.get("Area") and not pd.isna(row['Area']):
         area = Area.objects.get(key=row.get("Area"))
-        
+
     try:
         n = Neighborhood.objects.get(key=db_key)
     except Neighborhood.DoesNotExist:
