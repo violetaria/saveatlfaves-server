@@ -7,27 +7,12 @@ services:
             dockerfile: Dockerfile
         # We run a pip install to catch cases where requirements were added but a Docker build hasn't run yet
         command: bash -c "pip install -r requirements.txt && python manage.py runserver 0.0.0.0:8000"
-        working_dir: /usr/local/site/
+        working_dir: /usr/local/site/backend
         volumes:
-        - ./backend/:/usr/local/site/
-        - ./frontend:/usr/local/site/frontend
-        - ../certificates/private_keys.py:/usr/local/site/carebackend/private_keys.py
+        - ./backend/:/usr/local/site/backend/
         ports:
         - 8000:8000
+        environment:
+        - DJANGO_SETTINGS_MODULE=carebackend.settings.base
         env_file:
         - ./.env.dev
-    frontend:
-        build:
-            context: ./nginx
-            dockerfile: Dockerfile
-        ports:
-            - "80:80"
-            - "443:443"
-        depends_on:
-            - backend
-        volumes:
-        - ./nginx/build/:/usr/local/build/
-        - ../certificates/letsencrypt/:/etc/letsencrypt/
-        - ./backend/carebackend/django-static/:/usr/local/django-static/
-        - ./nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
-        - ../certificates/nginx_auth:/etc/nginx/nginx_auth

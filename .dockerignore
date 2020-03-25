@@ -1,0 +1,7 @@
+# Dev stuff
+.git
+.gitignore
+LICENSE
+README.md
+.vscode
+.DS_Store

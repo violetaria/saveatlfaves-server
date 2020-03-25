@@ -27,9 +27,10 @@ RUN set -ex \
 # install dependencies
 RUN set -ex && \
     pip install --upgrade pip
-COPY ./requirements.txt /usr/local/site/backend/requirements.txt
+COPY ./backend/requirements.txt /usr/local/site/backend/requirements.txt
 RUN set -ex && \
     pip install -r requirements.txt
 
 # copy project
-COPY . /usr/local/site/backend/
+COPY ./backend /usr/local/site/backend/
+COPY ./frontend /usr/local/site/frontend/
