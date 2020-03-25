@@ -2,9 +2,6 @@ import os
 from carebackend.settings.base import *
 import dj_database_url
 
-# allow release for heroku to be run
-SECRET_KEY = os.environ.get("SECRET_KEY")
-
 # only update a few items if we are going to heroku
 TO_UPDATE = ("HOST", "PORT", "USER", "PASSWORD", "NAME")
 HEROKU_DJ_DB_CONFIG = dj_database_url.config(conn_max_age=600, ssl_require=True)
