@@ -1,13 +1,123 @@
-Neighborhood,GeoJSON,Location,Geometry,Area
-Castleberry Hill,,,,downtown
-Centennial Hill,,,,downtown
-Fairlie-Poplar,,,,downtown
-Five Points,,,,downtown
-Hotel District,,,,downtown
-Luckie Marietta,,,,downtown
-Peachtree Center,,,,downtown
-SoNo,,,,downtown
-South Downtown,,,,downtown
+Neighborhood,GeoJSON,Location,Geometry,Area,Place Id
+Castleberry Hill,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.74928510000001,
+        ""lng"": -84.400194
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.754647,
+          ""lng"": -84.39567439999999
+        },
+        ""southwest"": {
+          ""lat"": 33.7426575,
+          ""lng"": -84.4065964
+        }
+      }
+    }
+}",downtown,ChIJQ30x-nkD9YgREUAfpa2nD-s
+Fairlie-Poplar,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7578889,
+        ""lng"": -84.3903423
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7597269,
+          ""lng"": -84.3876734
+        },
+        ""southwest"": {
+          ""lat"": 33.7543594,
+          ""lng"": -84.39350990000001
+        }
+      }
+    }
+}",downtown,ChIJkYnlJYcD9YgRkbWOv8WlITc
+Five Points,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.75455300000001,
+        ""lng"": -84.3901181
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.755461,
+          ""lng"": -84.38700559999999
+        },
+        ""southwest"": {
+          ""lat"": 33.7519173,
+          ""lng"": -84.39259539999999
+        }
+      }
+    }
+}",downtown,ChIJg7VOL4ED9YgRP1Qy7TApXUY
+Hotel District,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.762273,
+        ""lng"": -84.3875376
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.771303,
+          ""lng"": -84.3786362
+        },
+        ""southwest"": {
+          ""lat"": 33.75445690000001,
+          ""lng"": -84.3935407
+        }
+      }
+    }
+}",downtown,ChIJw9Aq-3sE9YgROLwbBxK3NIc
+Peachtree Center,,,"{  ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7594815,
+        ""lng"": -84.3859059
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.76230030000001,
+          ""lng"": -84.3821078
+        },
+        ""southwest"": {
+          ""lat"": 33.7570911,
+          ""lng"": -84.39208579999999
+        }
+      }
+    }
+}",downtown,ChIJJyXZPHgE9YgRyoppRJiZYHQ
+SoNo,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7680623,
+        ""lng"": -84.3844304
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.77129040000001,
+          ""lng"": -84.38189849999999
+        },
+        ""southwest"": {
+          ""lat"": 33.7625766,
+          ""lng"": -84.3903959
+        }
+      }
+    }
+}",downtown,ChIJd03ehnoE9YgRAVFXh0fPd1U
+South Downtown,,,"{ ""geometry"": {
+      ""location"": {
+        ""lat"": 33.74958119999999,
+        ""lng"": -84.392084
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7550796,
+          ""lng"": -84.38417849999999
+        },
+        ""southwest"": {
+          ""lat"": 33.7449413,
+          ""lng"": -84.39799189999999
+        }
+      }
+    }
+}",downtown,ChIJSX0jE4MD9YgRWGvOwOUad1A
 Midtown,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.783315,
@@ -24,7 +134,7 @@ Midtown,,,"{ ""geometry"": {
         }
       }
   }
-}",midtown
+}",midtown,ChIJU4zXC0IE9YgR4ru5MEyJjIc
 Ansley Park,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.794558,
@@ -41,7 +151,7 @@ Ansley Park,,,"{ ""geometry"": {
         }
       }
     }
-}",midtown
+}",midtown,ChIJF6IVYkkE9YgRJN9-pnJA6uo
 Atlantic Station,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.7912543,
@@ -58,7 +168,7 @@ Atlantic Station,,,"{ ""geometry"": {
         }
       }
     }
-}",midtown
+}",midtown,ChIJVbS_XvcE9YgRBnYS_RrLgHg
 Georgia Tech,,,"{  ""geometry"": {
       ""location"": {
         ""lat"": 33.77561779999999,
@@ -75,7 +185,7 @@ Georgia Tech,,,"{  ""geometry"": {
         }
       }
     }
-}",midtown
+}",midtown,ChIJbw3_E4oE9YgR9yiVCsbTgyY
 Technology Square,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.7759276,
@@ -92,7 +202,7 @@ Technology Square,,,"{ ""geometry"": {
         }
       }
     }
-}",
+}",midtown,ChIJjb0JjWYE9YgRSsHtsvk2Ab8
 Home Park,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.7861948,
@@ -109,7 +219,7 @@ Home Park,,,"{ ""geometry"": {
         }
       }
     }
-}",midtown
+}",midtown,ChIJgZkDG_QE9YgRpau_pFakxJI
 Loring Heights,,,"{  ""geometry"": {
       ""location"": {
         ""lat"": 33.7961596,
@@ -126,7 +236,7 @@ Loring Heights,,,"{  ""geometry"": {
         }
       }
     }
-}",midtown
+}",midtown,ChIJ3b9Z2PsE9YgRH_O6Ez0oWLU
 Sherwood Forest,,,"{ ""geometry"": {
       ""location"": {
         ""lat"": 33.8000166,
@@ -143,60 +253,74 @@ Sherwood Forest,,,"{ ""geometry"": {
         }
       }
     }
-}",midtown
-Berkeley Park,,,,west_midtown
-Blandtown,,,,west_midtown
-Knight Park/Howell Station,,,,west_midtown
-Marietta Street Artery,,,,west_midtown
-Atkins Park,,,,east_side
-Avondale Estates,,,,east_side
-Cabbagetown,,,,east_side
-Candler Park,,,,east_side
-Druid Hills,,,,east_side
-Decatur,,,,east_side
-East Atlanta,,,,east_side
-East Lake,,,,east_side
-Edgewood,,,,east_side
-Inman Park,,,,east_side
-Kirkwood,,,,east_side
-Lake Claire,,,,east_side
-Lindridge‑Martin Manor,,,,east_side
-Morningside‑Lenox Park,,,,east_side
-Oakland,,,,east_side
-Old Fourth Ward,,,,east_side
-Ormewood Park,,,,east_side
-Piedmont Heights,,,,east_side
-Poncey-Highland,,,,east_side
-Reynoldstown,,,,east_side
-Sweet Auburn,,,,east_side
-Scottdale,,,,east_side
-Virginia-Highland,,,,east_side
-Buckhead,,,,buckhead
-Amal Heights,,,,south_side
-Benteen Park,,,,south_side
-Betmar LaVilla,,,,south_side
-Blair Villa/Poole Creek,,,,south_side
-Boulevard Heights,,,,south_side
-Browns Mill Park,,,,south_side
-Chosewood Park,,,,south_side
-Custer/McDonough/Guice,,,,south_side
-Glenrose Heights,,,,south_side
-Grant Park,,,,south_side
-High Point,,,,south_side
-Joyland,,,,south_side
-Lakewood,,,,south_side
-Lakewood Heights,,,,south_side
-Norwood Manor,,,,south_side
-Orchard Knob,,,,south_side
-Peoplestown,,,,south_side
-Polar Rock,,,,south_side
-Rebel Valley Forest,,,,south_side
-Rosedale Heights,,,,south_side
-South Atlanta,,,,south_side
-South River Gardens,,,,south_side
-State Facility,,,,south_side
-Summerhill,,,,south_side
-Swallow Circle/Baywood,,,,south_side
-The Villages at Carver,,,,south_side
-Thomasville Heights,,,,south_side
-Woodland Hills,,,,south_side
+}",midtown,ChIJlWA6VEwE9YgRqCdnhenrKMQ
+Berkeley Park,,,,west_midtown,ChIJzbArsOYE9YgRRuWEU2U6uUM
+Blandtown,,,,west_midtown,ChIJwQRvXsME9YgRmoal1zrnAVs
+Knight Park/Howell Station,,,,west_midtown,ChIJA2PqzrgE9YgRzf-S44laKKo
+Marietta Street Artery,,,"{  ""geometry"": {
+      ""location"": {
+        ""lat"": 33.7616573,
+        ""lng"": -84.3957475
+      },
+      ""viewport"": {
+        ""northeast"": {
+          ""lat"": 33.7629626302915,
+          ""lng"": -84.39435161970849
+        },
+        ""southwest"": {
+          ""lat"": 33.7602646697085,
+          ""lng"": -84.39704958029151
+        }
+      }
+    }
+}",west_midtown,ChIJSaCoeo4E9YgReK01HISsLX8
+Atkins Park,,,,east_side,ChIJfaM3a6EG9YgRGxsRIWohOB0
+Avondale Estates,,,,east_side,ChIJUwEHnuip9YgRrAiWl3loPzk
+Cabbagetown,,,,east_side,ChIJJXTR8PAD9YgRroCDNoLDYJ8
+Candler Park,,,,east_side,ChIJQ6OxYbAG9YgRMBNtVMbgaqk
+Druid Hills,,,,east_side,ChIJTXcPc5UG9YgR5t_WJBxaxjs
+Decatur,,,,east_side,ChIJ6SD-FDwH9YgRAHjRfNzgUjE
+East Atlanta,,,,east_side,ChIJzeja_GoB9YgRchJwF0WTtBY
+East Lake,,,,east_side,ChIJ6xG-LNAA9YgR7Jc0-cn_3XE
+Edgewood,,,,east_side,ChIJYa8sZUwB9YgRVJGRZlb3aJQ
+Inman Park,,,,east_side,ChIJaVNHIAEE9YgRIBKYuApFxwk
+Kirkwood,,,,east_side,ChIJ48Z8UjIB9YgR8pw3HY5ZrLs
+Lake Claire,,,,east_side,ChIJT_07gMUG9YgRQMR9PAGeX7g
+Lindridge‑Martin Manor,,,,east_side,ChIJnV26L9kF9YgROB57dWgfrpI
+Morningside‑Lenox Park,,,,east_side,ChIJL9xs9yoE9YgRu4VmvZSChpk
+Old Fourth Ward,,,,east_side,ChIJH3_x2wgE9YgRaQ5DE0TzzGA
+Ormewood Park,,,,east_side,ChIJ--T_2d8D9YgRIuHtWZ2m0pY
+Piedmont Heights,,,,east_side,ChIJUUgfossF9YgRPuAGeZ93ukM
+Poncey-Highland,,,,east_side,ChIJ3y6kJB0E9YgRmopRcYaqNWA
+Reynoldstown,,,,east_side,ChIJ5RAWjv0D9YgRuvJON-ULmjk
+Sweet Auburn,,,,east_side,ChIJjY0KEIsD9YgRtGvsth7Trq4
+Scottdale,,,,east_side,ChIJ65IJLNOp9YgRZK2v36qrdEY
+Virginia-Highland,,,,east_side,ChIJTbg0vSEE9YgRCMPSB4w3sO8
+Lindberg,,,,buckhead,ChIJD7qluOAF9YgR8F_uFC_EuWQ
+Buckhead,,,,buckhead,ChIJ9R_SS1wP9YgRf0f1u8kC5zo
+Amal Heights,,,,south_side,ChIJ4cFsxvgC9YgR2AJY5ZlFe6w
+Benteen Park,,,,south_side,ChIJ593XX9ID9YgR3HjbFI7Cf74
+Blair Villa/Poole Creek,,,,south_side,ChIJo0J4S5D99IgRTAUQcdQmV9o
+Boulevard Heights,,,,south_side,ChIJVXY0BdAD9YgRW3P9rOLCRlU
+Browns Mill Park,,,,south_side,ChIJw63CQmkC9YgRXjazPCSjcM8
+Chosewood Park,,,,south_side,ChIJMylZPcoD9YgRYYP__DWwH08
+Custer/McDonough/Guice,,,,south_side,ChIJZ17rtCoC9YgRRsX-G2Jp-90
+Glenrose Heights,,,,south_side,ChIJPU8rWof99IgRFmTOIwu_Rvo
+Grant Park,,,,south_side,ChIJm-QPhukD9YgReGJfq3ZAxmI
+High Point,,,,south_side,ChIJ20eegaoD9YgR2o5SeV3FSCc
+Joyland,,,,south_side,ChIJu1xzn_8C9YgRpGMbRIVbwU8
+Lakewood,,,,south_side,ChIJLXbWmT8C9YgRqlkDhGxCm8M
+Lakewood Heights,,,,south_side,ChIJl4SS3U8C9YgRBrOOs59YSHs
+Norwood Manor,,,,south_side,ChIJReafkiQC9YgRai_VGyTvvwM
+Orchard Knob,,,,south_side,ChIJVfmIbHUC9YgRpIU_jnDEy5c
+Peoplestown,,,,south_side,ChIJv1XQNKUD9YgR8k3nrahsCAg
+Polar Rock,,,,south_side,ChIJM04eZvUC9YgR0A4RryMZ38o
+Rebel Valley Forest,,,,south_side,ChIJo989Tx4C9YgRhia-b5eS2S0
+Rosedale Heights,,,,south_side,ChIJ29dEqhIC9YgRZHUXjbAZPUQ
+South Atlanta,,,,south_side,ChIJgS42Qk0C9YgRB_6pXrT3ZXI
+South River Gardens,,,,south_side,ChIJ17DY4vj99IgRYE60kuK5KNA
+Summerhill,,,,south_side,ChIJRcKOHJgD9YgR5Ha-ZmbeOOE
+Swallow Circle-Baywood,,,,south_side,ChIJz6Fiy0IC9YgRptH1N28iDK4
+The Villages at Carver,,,,south_side,ChIJhRZOXlMC9YgRqemhec6O5Rw
+Thomasville Heights,,,,south_side,ChIJgb1aiSgC9YgRkIQ7-OeocUg
+Woodland Hills,,,,south_side,ChIJ65E0AH0B9YgRFgkzBQMN0GI

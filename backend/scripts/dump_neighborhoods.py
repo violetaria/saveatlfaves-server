@@ -2,7 +2,7 @@ import json
 import django
 import sys
 import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
 sys.path.append(os.path.dirname(__file__) + '/..')
 django.setup()
 from places.models import Neighborhood, NeighborhoodEntry, Place, Area

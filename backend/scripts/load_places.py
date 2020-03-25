@@ -2,7 +2,7 @@ import django
 import sys
 import os
 sys.path.append(os.path.dirname(__file__) + '/..')
-os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
 django.setup()
 from places.models import Place
 import pandas as pd

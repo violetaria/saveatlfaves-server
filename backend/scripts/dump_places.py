@@ -2,7 +2,7 @@ import django
 import sys
 import os
 import json
-os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
 sys.path.append(os.path.dirname(__file__) + '/..')
 django.setup()
 from places.models import Place
@@ -14,10 +14,10 @@ all_json = [p.to_typeahead_json() for p in all_places]
 
 template = """
 
-const SFPlaces = 
+const SFPlaces =
 %s;
 export default SFPlaces;
-""" 
+"""
 
 with open(fl, 'w') as out:
     out.write(template % json.dumps(all_json))

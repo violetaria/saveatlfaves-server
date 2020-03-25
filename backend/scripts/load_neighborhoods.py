@@ -2,12 +2,13 @@ import json
 import django
 import sys
 import os
-os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'carebackend.settings.base'
 sys.path.append(os.path.dirname(__file__) + '/..')
 django.setup()
 from places.models import Neighborhood, NeighborhoodEntry, Place, Area
 from django.contrib.gis.geos import Polygon
 import pandas as pd
+from places.google_places_helper import fetch_details_for_place_id
 
 fl = sys.argv[1]
 area_to_use = sys.argv[2]
@@ -20,6 +21,10 @@ df = pd.read_csv(fl)
 for _, row in df.iterrows():
     print("Processing", row['Neighborhood'])
     db_key = row.get('DB Key', "_".join(row['Neighborhood'].split()).lower())
+    # overwrite area if it's there
+    if row.get("Area") and not pd.isna(row['Area']):
+        area = Area.objects.get(key=row.get("Area"))
+        
     try:
         n = Neighborhood.objects.get(key=db_key)
     except Neighborhood.DoesNotExist:
@@ -52,6 +57,18 @@ for _, row in df.iterrows():
         n.bounds = Polygon.from_bbox(bbox)
         lat = geometry_json['geometry']['location']['lat']
         lng = geometry_json['geometry']['location']['lng']
+    elif row.get('Place Id') and not pd.isna(row['Place Id']):
+        place_id = row['Place Id']
+        r, photo_url, photo_attrib = fetch_details_for_place_id(place_id)
+        geometry_json = r['geometry']
+        xmin = geometry_json['viewport']['southwest']['lng']
+        ymin = geometry_json['viewport']['southwest']['lat']
+        xmax = geometry_json['viewport']['northeast']['lng']
+        ymax = geometry_json['viewport']['northeast']['lat']
+        bbox = (xmin, ymin, xmax, ymax)
+        n.bounds = Polygon.from_bbox(bbox)
+        lat = geometry_json['location']['lat']
+        lng = geometry_json['location']['lng']
     else:
         print("missing necessary data!")
         continue
