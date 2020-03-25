@@ -1,6 +1,10 @@
 import os
 from carebackend.settings.base import *
 import dj_database_url
+from django.core.management.utils import get_random_secret_key
+
+# allow release for heroku to be run
+SECRET_KEY = os.environ.get("SECRET_KEY", default=get_random_secret_key())
 
 # only update a few items if we are going to heroku
 TO_UPDATE = ("HOST", "PORT", "USER", "PASSWORD", "NAME")
