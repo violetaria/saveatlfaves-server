@@ -1,10 +1,9 @@
 import os
 from carebackend.settings.base import *
 import dj_database_url
-from django.core.management.utils import get_random_secret_key
 
 # allow release for heroku to be run
-SECRET_KEY = os.environ.get("SECRET_KEY", default=get_random_secret_key())
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # only update a few items if we are going to heroku
 TO_UPDATE = ("HOST", "PORT", "USER", "PASSWORD", "NAME")
@@ -20,7 +19,7 @@ INSTALLED_APPS.extend(["whitenoise.runserver_nostatic"])
 # Must insert after SecurityMiddleware, which is first in settings/common.py
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
-TEMPLATES[0]["DIRS"] = [os.path.join(BASE_DIR, "../", "frontend", "build")]
+TEMPLATES[0]["DIRS"] = [os.path.join(BASE_DIR, "../", "frontend")]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
