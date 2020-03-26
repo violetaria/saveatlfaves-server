@@ -141,9 +141,10 @@ cython_debug/
 
 # static files generated from Django application using `collectstatic`
 media
+static
 
 postgres-data
-django-static
+# django-static
 ingest/
 .DS_Store
 
