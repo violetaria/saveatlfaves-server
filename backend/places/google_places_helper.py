@@ -1,6 +1,10 @@
 from django.conf import settings
 from places.models import Place
 import requests
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 PLACES_API_ROOT = "https://maps.googleapis.com/maps/api/place"
 
@@ -27,7 +31,9 @@ def fetch_details_for_place_id(place_id):
         place_id=place_id,
         fields=FETCH_FIELDS)
     resp = requests.get(full_url)
+    logger.debug(resp)
     data = resp.json()
+    logger.debug(data)
     r = data['result']
     photo_url = None
     photo_attrib = None

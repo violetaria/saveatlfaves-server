@@ -24,7 +24,7 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 
 # 'DJANGO_ALLOWED_HOSTS' should be a single string of hosts with a space between each.
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(" ")
 
 
 INSTALLED_APPS = [
@@ -144,6 +144,11 @@ EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
 try:
-    from .private_keys import GOOGLE_PLACES_API_KEY, EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
+    from .private_keys import GOOGLE_PLACES_API_KEY
 except ImportError as e:
     print("Please supply a private_keys.py file with a GOOGLE_PLACES_API_KEY")
+
+try:
+    from .private_keys import EMAIL_HOST_USER, EMAIL_HOST_PASSWORD
+except ImportError as e:
+    print("Please supply a private_keys.py file with a EMAIL_HOST_USER and EMAIL_HOST_PASSWORD")
