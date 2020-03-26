@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -137,9 +137,7 @@ LOGGING = {
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/django-static/'
-STATIC_ROOT = os.path.join(os.path.dirname(__file__), "../", './django-static/')
-
-GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), './django-static/')
 
 EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_PORT = 465

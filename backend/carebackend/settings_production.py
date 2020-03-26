@@ -1,5 +1,5 @@
 import os
-from carebackend.settings.base import *
+from carebackend.settings import *
 import dj_database_url
 
 # only update a few items if we are going to heroku

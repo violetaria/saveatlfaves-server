@@ -13,6 +13,6 @@ services:
         ports:
         - 8000:8000
         environment:
-        - DJANGO_SETTINGS_MODULE=carebackend.settings.base
+        - DJANGO_SETTINGS_MODULE=carebackend.settings
         env_file:
         - ./.env.dev
