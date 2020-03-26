@@ -139,4 +139,9 @@ LOGGING = {
 STATIC_URL = '/django-static/'
 STATIC_ROOT = os.path.join(os.path.dirname(__file__), './django-static/')
 
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'django-static'),
+)
+
 GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
