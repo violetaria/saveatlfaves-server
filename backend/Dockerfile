@@ -2,7 +2,7 @@
 FROM python:3.8.0-slim
 
 # set work directory
-WORKDIR /usr/local/site/backend/
+WORKDIR /usr/local/site/
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -27,9 +27,9 @@ RUN set -ex \
 # install dependencies
 RUN set -ex && \
     pip install --upgrade pip
-COPY ./requirements.txt /usr/local/site/backend/requirements.txt
+COPY ./requirements.txt /usr/local/site/requirements.txt
 RUN set -ex && \
     pip install -r requirements.txt
 
 # copy project
-COPY . /usr/local/site/backend/
+COPY . /usr/local/site/

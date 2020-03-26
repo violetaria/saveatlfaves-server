@@ -10,9 +10,8 @@ services:
         working_dir: /usr/local/site/backend
         volumes:
         - ./backend/:/usr/local/site/backend/
+        - ../certificates/private_keys.py:/usr/local/site/carebackend/private_keys.py
         ports:
         - 8000:8000
-        environment:
-        - DJANGO_SETTINGS_MODULE=carebackend.settings
         env_file:
         - ./.env.dev

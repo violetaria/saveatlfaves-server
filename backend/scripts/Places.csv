@@ -1,6 +1,13 @@
-name,place_id
-Monday Night Brewing,ChIJGaB3peUE9YgRnAlaZJyZO9g
-Public School 404,ChIJ____aJME9YgR_gyktYS9sa0
-The Optimist,ChIJr9PpEZME9YgRYg1YifCbOw8
-Piiju Belly,ChIJBedpKZME9YgR3VqRCKLPLTI
-Food Terminal,ChIJX7w9HaEF9YgRPR83q-zJWis
+name,place_id,gift_card_url,takeout_url,donation_url,email
+Monday Night Brewing,ChIJGaB3peUE9YgRnAlaZJyZO9g,https://squareup.com/store/monday-night-brewing,https://mondaynightbrewing.com/to-go-sales/,,
+Public School 404,ChIJ____aJME9YgR_gyktYS9sa0,https://www.psontap.com/gift-cards/,https://www.doordash.com/business/public-school-958/?utm_campaign=958&utm_medium=website&utm_source=partner-link,,
+The Optimist,ChIJr9PpEZME9YgRYg1YifCbOw8,https://squareup.com/market/the-optimist,,,
+Piiju Belly,ChIJBedpKZME9YgR3VqRCKLPLTI,,https://direct.chownow.com/order/16723/locations,,pijiubelly@gmail.com
+Food Terminal,ChIJX7w9HaEF9YgRPR83q-zJWis,,https://direct.chownow.com/order/11956/locations,,
+Bold Monk,ChIJT9KvknAF9YgReD6o6LCcvrk,https://boldmonkbrewingco.com/product/gift-card/,,,
+Bocado,ChIJp1zzA5ME9YgRAnTbCVEQNJo,,https://direct.chownow.com/order/8772/locations,,
+Atlanta Brewing Company,ChIJlzkMXDIF9YgRLRJaA2-T5aQ,https://atlantabrewing.com/shop/,,,info@atlantabrewingcompany.com
+Bottle Rocket Fine Food and Beverage,ChIJJQEcinkD9YgRw46X2vrQ7rA,,https://www.bottlerocketatl.com/order-online,,
+Manuel's Tavern,ChIJnbi7oqcG9YgRCp6paNceye4,,https://www.ubereats.com/atlanta/food-delivery/manuels-tavern/U3ldl7jkR4GdtAlxmEzrvA,,manuelstavern.atl@gmail.com
+Empire State South,ChIJk1JQhkIE9YgRszI7YFGNgtQ,,https://www.empirestatesouth.com/onthego-1,,contact@empirestatesouth.com
+The Consulate,ChIJmxSlaV0E9YgRAtCrUezJZtw,,,,

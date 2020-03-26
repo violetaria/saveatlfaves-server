@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /bin/bash
 
 python3 manage.py migrate --settings carebackend.settings_production
 
