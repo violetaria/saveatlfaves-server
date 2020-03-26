@@ -136,6 +136,8 @@ LOGGING = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = "/static/"
+
+STATIC_URL = '/django-static/'
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), './django-static/')
 
 GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
