@@ -144,7 +144,7 @@ media
 static
 
 postgres-data
-# django-static
+django-static
 ingest/
 .DS_Store
 

@@ -9,3 +9,12 @@ if HEROKU_DJ_DB_CONFIG:
     DATABASES['default'].update((k, HEROKU_DJ_DB_CONFIG[k]) for k,v in DATABASES['default'].items() if k in TO_UPDATE)
 
 GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY")
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+# Ensure STATIC_ROOT exists.
+os.makedirs(config['STATIC_ROOT'], exist_ok=True)
+
+# Insert Whitenoise Middleware.
+MIDDLEWARE = tuple(['whitenoise.middleware.WhiteNoiseMiddleware'] + list(MIDDLEWARE))
