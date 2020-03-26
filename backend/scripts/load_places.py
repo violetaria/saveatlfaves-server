@@ -35,6 +35,8 @@ for _, row in df.iterrows():
         p.lng = lng or row['lng']
         p.image_attribution = photo_attrib
         p.gift_card_url = row.get('gift_card_url','')
+        p.takeout_url = row.get('takeout_url','')
+        p.donation_url = row.get('donation_url','')
         p.email_contact = row.get('email','')
 
         p.save()
