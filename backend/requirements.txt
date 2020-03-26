@@ -6,4 +6,3 @@ pandas
 requests
 ipython
 dj-database-url
-whitenoise

@@ -31,5 +31,4 @@ urlpatterns = [
     path('api/places/submit_email', submit_email_for_place),
     path('api/places/submit_gift_card_link', submit_gift_card_link),
     path('api/places/submit_new_place', submit_new_place),
-#    re_path(".*", TemplateView.as_view(template_name="build/index.html")),
 ]
