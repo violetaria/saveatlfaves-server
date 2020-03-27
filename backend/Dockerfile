@@ -33,3 +33,5 @@ RUN set -ex && \
 
 # copy project
 COPY . /usr/local/site/
+
+RUN SECRET_KEY=something_secret python3 manage.py collectstatic --noinput --settings carebackend.settings_production
